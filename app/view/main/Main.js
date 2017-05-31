@@ -13,7 +13,8 @@ Ext.define('TestModern.view.main.Main', {
         'Ext.MessageBox',
         'TestModern.view.main.MainController',
         'TestModern.view.main.MainModel',
-        'TestModern.view.movies.Movies'
+        'TestModern.view.movies.Movies',
+        'TestModern.view.time.Time'
     ],
 
     controller: 'main',
@@ -36,10 +37,11 @@ Ext.define('TestModern.view.main.Main', {
             }]
         },{
             title: 'Time',
-            iconCls: 'x-fa fa-time',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            iconCls: 'x-fa fa-clock-o',
+            layout: 'fit',
+            items: [{
+                xtype: 'timeselection'
+            }]
         },{
             title: 'Date',
             iconCls: 'x-fa fa-calendar',
@@ -48,7 +50,7 @@ Ext.define('TestModern.view.main.Main', {
             }
         },{
             title: 'Seats',
-            iconCls: 'x-fa fa-seat',
+            iconCls: 'x-fa fa-wheelchair',
             bind: {
                 html: '{loremIpsum}'
             }
